@@ -1,0 +1,40 @@
+name: Publicar no Instagram
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Simulação (não publica)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Publicar itens vencidos
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: node scripts/publish.mjs
+      - name: Salvar a fila atualizada
+        run: |
+          if [ -n "$(git status --porcelain queue.json)" ]; then
+            git config user.name "nexo-publisher"
+            git config user.email "actions@users.noreply.github.com"
+            git add queue.json
+            git commit -m "fila: atualiza status das publicacoes"
+            git pull --rebase
+            git push
+          fi

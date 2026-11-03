@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fila da semana</title>
+<style>
+:root{--bg:#f6f3ec;--ink:#1d2528;--mut:#5b676a;--pet:#0b5f6d;--brass:#e0a33a;--card:#fff;--line:#e3ddd0}
+@media (prefers-color-scheme:dark){:root{--bg:#0a1f24;--ink:#f6f3ec;--mut:#9fb8bc;--card:#0f2c33;--line:#1d4048}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.45}
+header{background:var(--pet);color:#fff;padding:28px 16px}
+header div{max-width:1100px;margin:auto}
+h1{margin:0;font-size:34px;letter-spacing:-.02em}
+header p{margin:6px 0 0;color:#cfe6e9}
+header b{color:var(--brass)}
+main{max-width:1100px;margin:auto;padding:20px 16px 60px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.bar button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 16px;border-radius:999px;font:700 15px inherit;cursor:pointer}
+.bar button[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#0b2a30}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.media{background:#0a1f24;aspect-ratio:4/5;display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+.media>*{flex:0 0 100%;scroll-snap-align:center;width:100%;height:100%;object-fit:contain}
+.info{padding:16px;display:flex;flex-direction:column;gap:10px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.when{font-weight:800;font-size:17px}
+.tag{font:800 12px inherit;text-transform:uppercase;letter-spacing:.06em;padding:5px 10px;border-radius:999px}
+.pendente{background:#fdf0d2;color:#7a5200}.publicado{background:#d6f1e1;color:#0f5a32}.erro{background:#fbd9d6;color:#8a1d12}
+.kind{color:var(--mut);font-weight:700;font-size:14px}
+.cap{white-space:pre-wrap;font-size:15px;color:var(--ink)}
+.err{color:#b3261e;font-size:14px}
+.empty{padding:40px;text-align:center;color:var(--mut)}
+</style>
+</head>
+<body>
+<header><div>
+<h1>Fila da semana</h1>
+<p><b>Nexo Imob</b> · IA para imobiliárias — o que vai ao ar no Instagram, com data, legenda e situação.</p>
+</div></header>
+<main>
+<div class="bar" id="bar">
+<button data-f="proximos" aria-pressed="true">Próximos</button>
+<button data-f="publicado" aria-pressed="false">Publicados</button>
+<button data-f="todos" aria-pressed="false">Todos</button>
+</div>
+<div class="grid" id="grid"></div>
+<p class="empty" id="empty" hidden>Nada por aqui ainda.</p>
+</main>
+<script>
+const fmt = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
+const grid = document.getElementById("grid"), empty = document.getElementById("empty");
+let Q = [], F = "proximos";
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ST = { pendente: "Agendado", publicado: "Publicado", erro: "Erro" };
+function card(q) {
+  const media = q.type === "reel"
+    ? `<video controls preload="none" playsinline poster="${esc(q.cover || "")}" src="${esc(q.media[0])}"></video>`
+    : q.media.map((m) => `<img loading="lazy" src="${esc(m)}" alt="">`).join("");
+  return `<article class="card"><div class="media">${media}</div><div class="info">
+    <div class="top"><span class="when">${esc(fmt.format(new Date(q.publish_at)))}</span><span class="tag ${esc(q.status)}">${esc(ST[q.status] || q.status)}</span></div>
+    <div class="kind">${q.type === "reel" ? "Reel" : "Carrossel · " + q.media.length + " slides"}</div>
+    <div class="cap">${esc(q.caption)}</div>${q.error ? `<div class="err">Erro: ${esc(q.error)}</div>` : ""}</div></article>`;
+}
+function draw() {
+  const now = Date.now();
+  const list = Q.filter((q) => F === "todos" || (F === "publicado" ? q.status === "publicado" : q.status !== "publicado")).sort((a, b) => a.publish_at.localeCompare(b.publish_at));
+  grid.innerHTML = list.map(card).join("");
+  empty.hidden = list.length > 0;
+}
+document.getElementById("bar").addEventListener("click", (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  F = b.dataset.f; [...document.querySelectorAll(".bar button")].forEach((x) => x.setAttribute("aria-pressed", x === b));
+  draw();
+});
+fetch("queue.json", { cache: "no-store" }).then((r) => r.json()).then((j) => { Q = j; draw(); }).catch(() => { empty.hidden = false; empty.textContent = "Não consegui carregar a fila."; });
+</script>
+</body>
+</html>
