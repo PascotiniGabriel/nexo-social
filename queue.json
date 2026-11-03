@@ -1,13 +1,43 @@
 [
   {
-    "id": "legado-r01",
+    "id": "legado-c02",
+    "type": "carousel",
+    "media": [
+      "media/legado/carousels/c02/slide-01.jpg",
+      "media/legado/carousels/c02/slide-02.jpg",
+      "media/legado/carousels/c02/slide-03.jpg",
+      "media/legado/carousels/c02/slide-04.jpg",
+      "media/legado/carousels/c02/slide-05.jpg",
+      "media/legado/carousels/c02/slide-06.jpg"
+    ],
+    "caption": "Sistema que só guarda informação te dá trabalho. Sistema que avisa te dá tempo. O Bom dia do Nexo resume o dia do dono: o que está parado, quem precisa de ajuda, o que fechar hoje. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-03T13:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "legado-r03",
     "type": "reel",
     "media": [
-      "media/legado/reels/r01.mp4"
+      "media/legado/reels/r03.mp4"
     ],
-    "cover": "media/legado/reels/r01-capa.jpg",
-    "caption": "Quantos leads estão parados na sua imobiliária hoje? E de qual corretor? Se você precisa abrir lead por lead pra descobrir, o sistema só guarda dado. No Nexo, o lead parado aparece em destaque, com a cobrança pronta. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-03T19:00:00-03:00",
+    "cover": "media/legado/reels/r03-capa.jpg",
+    "caption": "Desconfiar de qual corretor deixa lead esfriar não é saber. O Nexo lê o WhatsApp da imobiliária e mostra quem precisa de ajuda. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-03T14:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "legado-c03",
+    "type": "carousel",
+    "media": [
+      "media/legado/carousels/c03/slide-01.jpg",
+      "media/legado/carousels/c03/slide-02.jpg",
+      "media/legado/carousels/c03/slide-03.jpg",
+      "media/legado/carousels/c03/slide-04.jpg",
+      "media/legado/carousels/c03/slide-05.jpg",
+      "media/legado/carousels/c03/slide-06.jpg"
+    ],
+    "caption": "Corretor não preenche sistema, e a culpa não é dele. No Nexo ele continua no WhatsApp dele: depois da visita, um áudio ou um toque e o lead é atualizado. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-03T15:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -23,18 +53,7 @@
       "media/legado/carousels/c01/slide-07.jpg"
     ],
     "caption": "Se alguma dessas perguntas te fez abrir uma planilha, o seu sistema só guarda dado. O Nexo responde com os seus números. Chama no WhatsApp que eu mostro.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-06T12:00:00-03:00",
-    "status": "pendente"
-  },
-  {
-    "id": "legado-r07",
-    "type": "reel",
-    "media": [
-      "media/legado/reels/r07.mp4"
-    ],
-    "cover": "media/legado/reels/r07-capa.jpg",
-    "caption": "Sou de Santa Maria e fiz o Nexo pensando na imobiliária daqui. Sem depoimento inventado: eu mostro o sistema funcionando, você decide. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-07T19:00:00-03:00",
+    "publish_at": "2026-11-03T16:30:00-03:00",
     "status": "pendente"
   },
   {
@@ -45,22 +64,18 @@
     ],
     "cover": "media/legado/reels/r02-capa.jpg",
     "caption": "Portal, anúncio, indicação, Instagram: qual deles virou venda de verdade? Lead não é venda. O Nexo cruza canal, lead e fechamento pra você saber onde vale pôr dinheiro. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-10T19:00:00-03:00",
+    "publish_at": "2026-11-03T18:00:00-03:00",
     "status": "pendente"
   },
   {
-    "id": "legado-c02",
-    "type": "carousel",
+    "id": "legado-r01",
+    "type": "reel",
     "media": [
-      "media/legado/carousels/c02/slide-01.jpg",
-      "media/legado/carousels/c02/slide-02.jpg",
-      "media/legado/carousels/c02/slide-03.jpg",
-      "media/legado/carousels/c02/slide-04.jpg",
-      "media/legado/carousels/c02/slide-05.jpg",
-      "media/legado/carousels/c02/slide-06.jpg"
+      "media/legado/reels/r01.mp4"
     ],
-    "caption": "Sistema que só guarda informação te dá trabalho. Sistema que avisa te dá tempo. O Bom dia do Nexo resume o dia do dono: o que está parado, quem precisa de ajuda, o que fechar hoje. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-11T12:00:00-03:00",
+    "cover": "media/legado/reels/r01-capa.jpg",
+    "caption": "Quantos leads estão parados na sua imobiliária hoje? E de qual corretor? Se você precisa abrir lead por lead pra descobrir, o sistema só guarda dado. No Nexo, o lead parado aparece em destaque, com a cobrança pronta. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-03T19:30:00-03:00",
     "status": "pendente"
   },
   {
@@ -71,7 +86,7 @@
     ],
     "cover": "media/legado/reels/r05-capa.jpg",
     "caption": "O banco negou o crédito? A venda não morre. O Match mostra os clientes certos pro imóvel novo e o Plano B sugere opções mais baratas pro cliente que não foi aprovado. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-12T19:00:00-03:00",
+    "publish_at": "2026-11-04T19:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -87,7 +102,7 @@
       "media/legado/carousels/c04/slide-07.jpg"
     ],
     "caption": "O banco negou o crédito, mas o cliente ainda quer comprar. O Plano B sugere imóveis parecidos e mais baratos, e o Match mostra quais clientes da base combinam com cada imóvel novo. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-13T12:00:00-03:00",
+    "publish_at": "2026-11-05T12:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -98,44 +113,29 @@
     ],
     "cover": "media/legado/reels/r06-capa.jpg",
     "caption": "Corretor não preenche sistema? Então que seja por áudio. Um toque atualiza o lead, o imóvel entra por foto ou áudio, e o Nexo só lê o WhatsApp: não manda nada. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-14T19:00:00-03:00",
+    "publish_at": "2026-11-06T19:00:00-03:00",
     "status": "pendente"
   },
   {
-    "id": "legado-r03",
+    "id": "legado-r04",
     "type": "reel",
     "media": [
-      "media/legado/reels/r03.mp4"
+      "media/legado/reels/r04.mp4"
     ],
-    "cover": "media/legado/reels/r03-capa.jpg",
-    "caption": "Desconfiar de qual corretor deixa lead esfriar não é saber. O Nexo lê o WhatsApp da imobiliária e mostra quem precisa de ajuda. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-17T19:00:00-03:00",
+    "cover": "media/legado/reels/r04-capa.jpg",
+    "caption": "O que seus clientes pedem e você não tem na carteira? Captar no escuro custa caro. O Nexo mostra demanda contra oferta (exemplo ilustrativo). Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-07T19:00:00-03:00",
     "status": "pendente"
   },
   {
-    "id": "legado-c03",
-    "type": "carousel",
-    "media": [
-      "media/legado/carousels/c03/slide-01.jpg",
-      "media/legado/carousels/c03/slide-02.jpg",
-      "media/legado/carousels/c03/slide-03.jpg",
-      "media/legado/carousels/c03/slide-04.jpg",
-      "media/legado/carousels/c03/slide-05.jpg",
-      "media/legado/carousels/c03/slide-06.jpg"
-    ],
-    "caption": "Corretor não preenche sistema, e a culpa não é dele. No Nexo ele continua no WhatsApp dele: depois da visita, um áudio ou um toque e o lead é atualizado. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-18T12:00:00-03:00",
-    "status": "pendente"
-  },
-  {
-    "id": "legado-r08",
+    "id": "legado-r07",
     "type": "reel",
     "media": [
-      "media/legado/reels/r08.mp4"
+      "media/legado/reels/r07.mp4"
     ],
-    "cover": "media/legado/reels/r08-capa.jpg",
-    "caption": "Como começar com o Nexo: implantação de R$ 800 com o 1º mês de uso incluso. Mensalidade só a partir do 2º mês. Planos Leads (R$ 497), Completo (R$ 1.097) e Pro (R$ 1.797). Sem teste grátis e sem desconto: preço claro. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-19T19:00:00-03:00",
+    "cover": "media/legado/reels/r07-capa.jpg",
+    "caption": "Sou de Santa Maria e fiz o Nexo pensando na imobiliária daqui. Sem depoimento inventado: eu mostro o sistema funcionando, você decide. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-08T19:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -151,18 +151,18 @@
       "media/legado/carousels/c05/slide-07.jpg"
     ],
     "caption": "Implantação de R$ 800 com o 1º mês de uso incluso. Planos Leads, Completo e Pro, sem teste grátis e sem desconto. Preço claro, conversa franca. Sou de Santa Maria. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #imoveis #gestaoimobiliaria #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-20T12:00:00-03:00",
+    "publish_at": "2026-11-09T12:00:00-03:00",
     "status": "pendente"
   },
   {
-    "id": "legado-r04",
+    "id": "legado-r08",
     "type": "reel",
     "media": [
-      "media/legado/reels/r04.mp4"
+      "media/legado/reels/r08.mp4"
     ],
-    "cover": "media/legado/reels/r04-capa.jpg",
-    "caption": "O que seus clientes pedem e você não tem na carteira? Captar no escuro custa caro. O Nexo mostra demanda contra oferta (exemplo ilustrativo). Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
-    "publish_at": "2026-11-21T19:00:00-03:00",
+    "cover": "media/legado/reels/r08-capa.jpg",
+    "caption": "Como começar com o Nexo: implantação de R$ 800 com o 1º mês de uso incluso. Mensalidade só a partir do 2º mês. Planos Leads (R$ 497), Completo (R$ 1.097) e Pro (R$ 1.797). Sem teste grátis e sem desconto: preço claro. Chama no WhatsApp.\n\n#imobiliaria #santamaria #corretordeimoveis #gestaoimobiliaria #imoveis #crmimobiliario #nexoimob",
+    "publish_at": "2026-11-10T19:00:00-03:00",
     "status": "pendente"
   }
 ]
