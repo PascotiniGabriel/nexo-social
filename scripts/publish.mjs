@@ -1,5 +1,5 @@
 // Publica no Instagram os itens "pendente" de queue.json cujo horário já chegou.
-// Instagram API with Instagram Login (graph.instagram.com). Sem dependências (Node 20).
+// Instagram API com login unificado (graph.facebook.com, token de usuário do sistema que não expira). Sem dependências (Node 20).
 // Env: IG_USER_ID, IG_ACCESS_TOKEN (segredos), DRY_RUN=1 (não chama a API nem altera a fila),
 //      MEDIA_BASE_URL (padrão: https://<dono>.github.io/<repo>/), IG_API_VERSION (padrão v26.0),
 //      NOW (ISO, só para testes), MAX_PER_RUN (padrão 2), QUEUE_FILE (padrão ./queue.json)
@@ -10,7 +10,7 @@ const DRY = /^(1|true|sim)$/i.test(process.env.DRY_RUN ?? "");
 const TOKEN = process.env.IG_ACCESS_TOKEN ?? "";
 const UID = process.env.IG_USER_ID ?? "";
 const VER = process.env.IG_API_VERSION || "v26.0";
-const API = `https://graph.instagram.com/${VER}`;
+const API = `https://${process.env.IG_GRAPH_HOST || "graph.facebook.com"}/${VER}`;
 const QFILE = resolve(process.env.QUEUE_FILE || "queue.json");
 const NOW = process.env.NOW ? new Date(process.env.NOW) : new Date();
 const MAX = Number(process.env.MAX_PER_RUN || 2);
