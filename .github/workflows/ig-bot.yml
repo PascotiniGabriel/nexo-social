@@ -1,5 +1,5 @@
 name: Atendente IA do Instagram
-# Responde comentários e directs do @nexoimob.ia. BOT_MODE (Settings > Variables) = ensaio (padrão, só grava rascunhos) ou ativo.
+# Responde comentários e directs do @nexoimob.ia. O modo (ensaio/ativo/pausado) fica no estado e muda por DM do dono.
 on:
   schedule:
     - cron: "*/10 * * * *"
@@ -23,8 +23,6 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GH_PAT: ${{ secrets.GH_PAT }}
-          BOT_MODE: ${{ vars.BOT_MODE || 'ensaio' }}
         run: node scripts/ig-bot/bot.mjs
       - name: Salvar estado (só IDs)
         run: |

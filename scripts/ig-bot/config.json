@@ -1,6 +1,5 @@
 {
   "modo_padrao": "ensaio",
-  "repo_privado": "PascotiniGabriel/nexo-imob-saas",
   "palavras_chave": [
     "NEXO",
     "CHEGA",
@@ -27,7 +26,8 @@
     "respostas_por_conversa_por_dia": 8,
     "maximo_itens_por_execucao": 15,
     "comentarios_dias": 3,
-    "midias_recentes": 10
+    "midias_recentes": 10,
+    "avisos_por_execucao": 8
   },
   "agenda": {
     "fuso": "America/Sao_Paulo",
@@ -81,5 +81,6 @@
     "gemini-3.5-flash",
     "gemini-3.1-flash-lite",
     "gemini-3.8-flash"
-  ]
+  ],
+  "owner_username": "gabriel_pascotini"
 }

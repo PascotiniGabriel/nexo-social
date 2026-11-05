@@ -127,6 +127,7 @@ function parse(txt) {
 
 // Entrada: {canal, historico:[{de:'cliente'|'nos', texto}], livres:[], confusos:number}
 export async function pensar(ctx, cfg = loadConfig()) {
+  if (globalThis.__BRAIN_MOCK) return globalThis.__BRAIN_MOCK(ctx);
   const sys = systemPrompt(cfg);
   let user = contexto(ctx), ultimo = null, motivos = [];
   for (let tent = 0; tent < 2; tent++) {

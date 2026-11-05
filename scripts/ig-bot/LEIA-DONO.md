@@ -1,45 +1,44 @@
 # Atendente IA do Instagram (@nexoimob.ia) - guia do dono
 
 ## O que ele faz
-- Olha os comentários dos seus posts e as mensagens diretas (directs) a cada 10 minutos.
-- Comentou uma palavra do post (NEXO, PAINEL, TOUR, MATCH...): responde "Te chamei no direct!" e manda a primeira mensagem no direct.
-- Comentou outra coisa: responde só se for pergunta, elogio ou dúvida. Spam e ofensa ele ignora.
-- No direct: conversa curto, tira dúvida sobre o Nexo e tenta marcar uma demonstração de 30 a 40 min (online ou presencial). Pega nome, imobiliária, cidade, WhatsApp, modalidade e horário.
-- Quando fecha, diz "pré-agendado, o Gabriel confirma no seu WhatsApp" e faz abrir um aviso (issue) no repositório PRIVADO nexo-imob-saas com a etiqueta "agendamento". Esse aviso tem os dados do cliente. Horário já ocupado não é oferecido de novo.
-- Reclamação, xingamento, contrato, imprensa, parceria, pedido de falar com gente, ou 2 respostas sem entender: ele avisa "vou chamar o Gabriel" e abre um aviso com a etiqueta "instagram-humano". Depois disso ele fica em silêncio naquela conversa.
-- Máximo de 8 respostas por conversa por dia.
-- Ele nunca dá desconto, nunca cita outros sistemas, nunca inventa funcionalidade e só fala preço se perguntarem.
-- Nada de dado de cliente fica neste repositório (que é público). O arquivo ig-bot-state.json guarda só números de identificação.
+- A cada 10 minutos olha comentários dos posts e directs.
+- Comentou uma palavra do post (NEXO, PAINEL, TOUR, MATCH...): resposta pública "Te chamei no direct!" e primeira mensagem no direct.
+- Outros comentários: responde só pergunta, elogio ou dúvida. Spam e ofensa são ignorados.
+- No direct: conversa curto, tira dúvida e tenta marcar demonstração de 30 a 40 min (online ou presencial), pegando nome, imobiliária, cidade, WhatsApp, modalidade e horário. Fecha como "pré-agendado, o Gabriel confirma no seu WhatsApp".
+- Reclamação, xingamento, contrato, imprensa, parceria, pedido de gente, ou 2 respostas sem entender: avisa "vou chamar o Gabriel" e fica em silêncio naquela conversa. Máximo de 8 respostas por conversa por dia.
+- Nunca dá desconto, nunca cita outros sistemas, nunca inventa funcionalidade; preço só se perguntarem.
+
+## Como você fala com ele: pelo seu Instagram
+Tudo chega no seu direct (@gabriel_pascotini), enviado pela conta @nexoimob.ia. Não há e-mail, nem issue, nem token extra.
+**Passo único para abrir o canal: mande um "oi" de @gabriel_pascotini para @nexoimob.ia.** O Instagram só deixa a conta responder até 24 horas depois da sua última mensagem. Se passar disso, os avisos ficam guardados e chegam assim que você escrever de novo. Quando faltar menos de 3 h, o aviso termina com "(responda qualquer coisa pra manter o canal aberto)". Se mandar qualquer mensagem de vez em quando (ex.: "status"), o canal fica aberto.
+
+Comandos (maiúscula ou minúscula, tanto faz):
+- status: mostra o modo e as contagens.
+- ensaio: ele NÃO responde clientes; só te manda rascunhos numerados (#3 com a mensagem do cliente e a resposta proposta).
+- ok 3: envia de verdade o rascunho 3. não 3: descarta.
+- ativar: passa a responder clientes sozinho. ensaio: volta ao ensaio. pausar: não responde ninguém.
+- liberar 2026-11-10 09:00: libera um horário que ele marcou como ocupado.
+Só você consegue mudar o modo (ele reconhece o nome @gabriel_pascotini).
 
 ## Modo ENSAIO (já vem assim)
-No ensaio ele NÃO envia nada ao Instagram. Cada resposta que ele daria vira um aviso no repositório privado nexo-imob-saas com a etiqueta "ig-ensaio". Leia vários, veja se o tom e as respostas estão bons, e só então ative.
+Em ensaio o único envio é para você (e os rascunhos que você aprovar com "ok N"). Veja alguns rascunhos e, quando estiver confiante, mande "ativar".
 
-## Como mudar as regras e a agenda
-Edite pela tela do GitHub (lápis no arquivo, depois "Commit changes"), na pasta scripts/ig-bot:
-- regras.md: o que ele pode e não pode falar, o tom, quando chamar o humano. É texto normal em português.
-- config.json: palavras-chave (palavras_chave), as frases de resposta pública, a mensagem de abertura do direct (abertura_direct), preços, limites e a agenda:
-  - dias_uteis: 1 = segunda ... 5 = sexta
-  - inicios: horários de início das demonstrações
-  - feriados: datas que não devem ser oferecidas, no formato "2026-12-25"
-  - duracao_min: duração da demonstração
+## Privacidade
+O repositório é público. Nele ficam só números de identificação, os horários já pré-agendados e, quando necessário, rascunhos CIFRADOS (só o bot, com a chave Gemini, consegue ler). Nome, telefone e texto de cliente não ficam em arquivo nem no log: o aviso é remontado na hora lendo o Instagram.
 
-## Como ativar (uma vez)
-1. Crie o segredo GEMINI_API_KEY: no repositório nexo-social, Settings > Secrets and variables > Actions > New repository secret. Nome GEMINI_API_KEY, valor é a chave do Gemini.
-2. Crie o token do GitHub para o bot escrever avisos no repositório privado:
-   - GitHub > sua foto > Settings > Developer settings > Personal access tokens > Fine-grained tokens > Generate new token.
-   - Resource owner: PascotiniGabriel. Repository access: Only select repositories > nexo-imob-saas.
-   - Permissions > Repository permissions > Issues: Read-only e Contents: Read and write (o Contents é exigido para o bot avisar o repositório privado). Mais nada.
-   - Os avisos chegam por e-mail: o repositório privado tem o workflow ig-bot-inbox.yml, que cria as issues como github-actions[bot]. Deixe o repositório nexo-imob-saas em Watch > All Activity (ou Custom > Issues).
-   - Gere, copie e cole como segredo com o nome GH_PAT (mesma tela do passo 1).
-3. Os segredos IG_ACCESS_TOKEN e IG_USER_ID já existem.
-4. Ligue o workflow: aba Actions > "Atendente IA do Instagram" > "Enable workflow". Clique em "Run workflow" para testar na hora.
-5. Fique em ENSAIO por alguns dias e leia os avisos "ig-ensaio".
-6. Para valer de verdade: Settings > Secrets and variables > Actions > aba Variables > New repository variable. Nome BOT_MODE, valor ativo. Para voltar ao ensaio, apague a variável ou troque o valor para ensaio.
-Para desligar tudo: Actions > "Atendente IA do Instagram" > menu "..." > Disable workflow.
+## Como mudar regras e agenda
+Edite pela tela do GitHub (lápis no arquivo, "Commit changes") em scripts/ig-bot:
+- regras.md: o que pode e não pode falar, tom, quando chamar humano.
+- config.json: palavras-chave, frases públicas, mensagem de abertura do direct, preços, limites e a agenda (dias_uteis 1=seg...5=sex, inicios, feriados no formato "2026-12-25", duracao_min) e owner_username.
 
-## Permissões do Instagram (conferido em 05/11/2026)
-O diagnóstico (Actions > ig-bot-check) mostrou que o token tem instagram_manage_comments e instagram_manage_messages, e consegue ler mídias e conversas. NÃO foi possível confirmar sem enviar mensagem real: o envio de respostas (resposta pública em comentário e mensagem no direct). Isso só será testado quando você ativar. Se o envio falhar, o bot abre um aviso "instagram-humano" e o log mostra o código de erro da Meta. Se acontecer:
-- Business Manager > Configurações do negócio > Usuários > Usuários do sistema > seu usuário > Adicionar ativos: garanta a conta do Instagram com controle total e, se houver, a Página do Facebook vinculada.
-- No mesmo usuário do sistema: Gerar novo token, escolhendo o app e marcando instagram_manage_comments, instagram_manage_messages, instagram_basic, instagram_content_publish e, se aparecer, pages_messaging e pages_show_list. Troque o segredo IG_ACCESS_TOKEN pelo novo.
-- No app do Instagram: Configurações > Mensagens e respostas de histórias (ou Privacidade > Mensagens) > Ferramentas conectadas > ligar "Permitir acesso a mensagens". Este passo eu NÃO verifiquei e o nome da tela varia.
-- Limite da Meta: só dá para responder no direct até 24 horas depois da última mensagem do cliente (o bot respeita isso). O app Meta pode precisar estar em modo "Ativo" (Live) para receber mensagens de pessoas que não são testadoras: NÃO verifiquei.
+## Como ligar
+1. Crie o segredo GEMINI_API_KEY no repositório nexo-social (Settings > Secrets and variables > Actions > New repository secret). Os segredos IG_ACCESS_TOKEN e IG_USER_ID já existem. Nenhum outro é necessário.
+2. Ligue o workflow: Actions > "Atendente IA do Instagram" > Enable workflow.
+3. Mande o "oi" para a conta (acima). Para desligar tudo: Disable workflow.
+
+## Permissões do Instagram
+O diagnóstico (Actions > ig-bot-check) mostrou que o token tem instagram_manage_comments e instagram_manage_messages e que consegue ler mídias e conversas. NÃO foi possível confirmar sem mandar mensagem real: o envio de DMs (inclusive os avisos a você). Se falhar, o log mostra o código da Meta. Então:
+- Business Manager > Configurações do negócio > Usuários do sistema > seu usuário > Adicionar ativos: a conta do Instagram com controle total (e a Página vinculada, se houver).
+- Gerar novo token marcando instagram_manage_comments, instagram_manage_messages, instagram_basic, instagram_content_publish (e pages_messaging e pages_show_list se aparecerem). Troque o segredo IG_ACCESS_TOKEN.
+- No Instagram: Configurações > Mensagens > ferramentas conectadas > "Permitir acesso a mensagens" (não verificado, o nome da tela varia).
+- O app Meta pode precisar estar em modo Live para DMs de quem não é testador (não verificado).
