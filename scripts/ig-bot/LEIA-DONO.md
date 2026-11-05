@@ -5,7 +5,7 @@
 - Comentou uma palavra do post (NEXO, PAINEL, TOUR, MATCH...): responde "Te chamei no direct!" e manda a primeira mensagem no direct.
 - Comentou outra coisa: responde só se for pergunta, elogio ou dúvida. Spam e ofensa ele ignora.
 - No direct: conversa curto, tira dúvida sobre o Nexo e tenta marcar uma demonstração de 30 a 40 min (online ou presencial). Pega nome, imobiliária, cidade, WhatsApp, modalidade e horário.
-- Quando fecha, diz "pré-agendado, o Gabriel confirma no seu WhatsApp" e abre um aviso (issue) no repositório PRIVADO nexo-imob-saas com a etiqueta "agendamento". Esse aviso tem os dados do cliente. Horário já ocupado não é oferecido de novo.
+- Quando fecha, diz "pré-agendado, o Gabriel confirma no seu WhatsApp" e faz abrir um aviso (issue) no repositório PRIVADO nexo-imob-saas com a etiqueta "agendamento". Esse aviso tem os dados do cliente. Horário já ocupado não é oferecido de novo.
 - Reclamação, xingamento, contrato, imprensa, parceria, pedido de falar com gente, ou 2 respostas sem entender: ele avisa "vou chamar o Gabriel" e abre um aviso com a etiqueta "instagram-humano". Depois disso ele fica em silêncio naquela conversa.
 - Máximo de 8 respostas por conversa por dia.
 - Ele nunca dá desconto, nunca cita outros sistemas, nunca inventa funcionalidade e só fala preço se perguntarem.
@@ -28,7 +28,8 @@ Edite pela tela do GitHub (lápis no arquivo, depois "Commit changes"), na pasta
 2. Crie o token do GitHub para o bot escrever avisos no repositório privado:
    - GitHub > sua foto > Settings > Developer settings > Personal access tokens > Fine-grained tokens > Generate new token.
    - Resource owner: PascotiniGabriel. Repository access: Only select repositories > nexo-imob-saas.
-   - Permissions > Repository permissions > Issues: Read and write. (Mais nada.)
+   - Permissions > Repository permissions > Issues: Read-only e Contents: Read and write (o Contents é exigido para o bot avisar o repositório privado). Mais nada.
+   - Os avisos chegam por e-mail: o repositório privado tem o workflow ig-bot-inbox.yml, que cria as issues como github-actions[bot]. Deixe o repositório nexo-imob-saas em Watch > All Activity (ou Custom > Issues).
    - Gere, copie e cole como segredo com o nome GH_PAT (mesma tela do passo 1).
 3. Os segredos IG_ACCESS_TOKEN e IG_USER_ID já existem.
 4. Ligue o workflow: aba Actions > "Atendente IA do Instagram" > "Enable workflow". Clique em "Run workflow" para testar na hora.
