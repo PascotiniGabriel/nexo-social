@@ -1,0 +1,85 @@
+{
+  "modo_padrao": "ensaio",
+  "repo_privado": "PascotiniGabriel/nexo-imob-saas",
+  "palavras_chave": [
+    "NEXO",
+    "CHEGA",
+    "TOUR",
+    "MATCH",
+    "COMEÇAR",
+    "COMECAR",
+    "DONO",
+    "PAINEL",
+    "LEAD",
+    "CANAL",
+    "PRAZO",
+    "DEMO",
+    "DEMONSTRAÇÃO",
+    "DEMONSTRACAO"
+  ],
+  "resposta_publica_palavra_chave": [
+    "Te chamei no direct!",
+    "Te mandei no direct, dá uma olhada!",
+    "Acabei de te chamar no direct!"
+  ],
+  "abertura_direct": "Oi! Aqui é a equipe do Nexo Imob. Você comentou no nosso post. O Nexo é um painel que mostra ao dono da imobiliária quais leads ficaram sem resposta e qual canal virou venda. Posso te mostrar numa demonstração rápida de 30 a 40 min, online ou presencial. Qual seu nome?",
+  "limites": {
+    "respostas_por_conversa_por_dia": 8,
+    "maximo_itens_por_execucao": 15,
+    "comentarios_dias": 3,
+    "midias_recentes": 10
+  },
+  "agenda": {
+    "fuso": "America/Sao_Paulo",
+    "dias_uteis": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "inicios": [
+      "09:00",
+      "10:00",
+      "11:00",
+      "14:00",
+      "15:00",
+      "16:00",
+      "17:00"
+    ],
+    "duracao_min": 40,
+    "dias_a_frente": 7,
+    "feriados": []
+  },
+  "precos": {
+    "Leads": 497,
+    "Completo": 1097,
+    "Pro": 1797,
+    "implantacao": 800
+  },
+  "concorrentes_proibidos": [
+    "jetimob",
+    "imobibrasil",
+    "kenlo",
+    "tecimob",
+    "anapro",
+    "univen",
+    "superlogica",
+    "imoview",
+    "pipedrive",
+    "rd station",
+    "hubspot",
+    "kommo",
+    "vivareal",
+    "zap imoveis",
+    "olx",
+    "c2s",
+    "arbo"
+  ],
+  "contato_humano": "o Gabriel",
+  "modelos": [
+    "gemini-3.5-flash",
+    "gemini-3.1-flash-lite",
+    "gemini-3.8-flash"
+  ]
+}
