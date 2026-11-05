@@ -60,7 +60,7 @@ function card(q) {
     : q.media.map((m) => `<img loading="lazy" src="${esc(m)}" alt="">`).join("");
   return `<article class="card"><div class="media">${media}</div><div class="info">
     <div class="top"><span class="when">${esc(fmt.format(new Date(q.publish_at)))}</span><span class="tag ${esc(q.status)}">${esc(ST[q.status] || q.status)}</span></div>
-    <div class="kind">${q.type === "reel" ? "Reel" : "Carrossel · " + q.media.length + " slides"}</div>
+    <div class="kind">${q.type === "reel" ? "Reel" : q.type === "image" ? "Imagem" : "Carrossel · " + q.media.length + " slides"}</div>
     <div class="cap">${esc(q.caption)}</div>${q.error ? `<div class="err">Erro: ${esc(q.error)}</div>` : ""}</div></article>`;
 }
 function draw() {

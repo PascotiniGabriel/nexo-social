@@ -56,6 +56,8 @@ async function publishItem(it) {
     const p = { media_type: "REELS", video_url: url(it.media[0]), caption: it.caption, share_to_feed: "true" };
     if (it.cover) p.cover_url = url(it.cover);
     creation = (await api("POST", `/${UID}/media`, p)).id;
+  } else if (it.type === "image") {
+    creation = (await api("POST", `/${UID}/media`, { image_url: url(it.media[0]), caption: it.caption })).id;
   } else if (it.type === "carousel") {
     const kids = [];
     for (const m of it.media) {
