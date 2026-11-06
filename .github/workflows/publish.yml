@@ -10,6 +10,7 @@ on:
         default: false
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: publicar
   cancel-in-progress: false
