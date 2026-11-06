@@ -56,6 +56,10 @@ async function publishItem(it) {
     const p = { media_type: "REELS", video_url: url(it.media[0]), caption: it.caption, share_to_feed: "true" };
     if (it.cover) p.cover_url = url(it.cover);
     creation = (await api("POST", `/${UID}/media`, p)).id;
+  } else if (it.type === "story") {
+    const m = it.media[0];
+    const p = /.(mp4|mov)$/i.test(m) ? { media_type: "STORIES", video_url: url(m) } : { media_type: "STORIES", image_url: url(m) };
+    creation = (await api("POST", `/${UID}/media`, p)).id;
   } else if (it.type === "image") {
     creation = (await api("POST", `/${UID}/media`, { image_url: url(it.media[0]), caption: it.caption })).id;
   } else if (it.type === "carousel") {
