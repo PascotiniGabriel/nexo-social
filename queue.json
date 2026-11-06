@@ -83,7 +83,27 @@
       "media/lanc/L4/01.jpg"
     ],
     "caption": "Cliente certo. Imóvel certo.\nO Match cruza o perfil do cliente com o catálogo e coloca os imóveis em ordem de aderência.\nExato quando atende tudo, parecido quando algo mudou.\nO corretor liga com opção na mão, não com desculpa.\nComenta MATCH e eu te mostro.\n\n#corretordeimoveis #inteligenciaartificial #mercadoimobiliario #imoveis #santamariars",
-    "publish_at": "2026-11-07T19:00:00-03:00",
+    "publish_at": "2026-11-07T12:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia1_a",
+    "type": "story",
+    "media": [
+      "media/stories/Dia1_a.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-07T12:30:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia1_b",
+    "type": "story",
+    "media": [
+      "media/stories/Dia1_b.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-07T16:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -94,7 +114,27 @@
     ],
     "cover": "media/lanc/F4-capa.jpg",
     "caption": "Mais anúncio é igual a mais venda? Mito. Venda vem do canal que converte.\nComenta CANAL que eu te mostro no direct.\n#marketingimobiliario #trafegopago #mercadoimobiliario #imobiliaria #santamariars",
-    "publish_at": "2026-11-08T19:00:00-03:00",
+    "publish_at": "2026-11-07T19:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia1_c",
+    "type": "story",
+    "media": [
+      "media/stories/Dia1_c.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-07T20:30:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia2_a",
+    "type": "story",
+    "media": [
+      "media/stories/Dia2_a.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-08T09:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -108,7 +148,27 @@
       "media/lanc/L5/05.jpg"
     ],
     "caption": "Como o Nexo funciona em 3 passos.\n1. Você conecta o que a imobiliária já usa.\n2. No outro dia, o painel já mostra o que está acontecendo.\n3. Você decide quem chamar primeiro.\nO Nexo só lê e mostra. Não responde cliente e não manda mensagem.\nComenta COMEÇAR e eu te explico a conexão.\n\n#tecnologiaimobiliaria #mercadoimobiliario #gestaoimobiliaria #imobiliaria #riograndedosul",
-    "publish_at": "2026-11-09T19:00:00-03:00",
+    "publish_at": "2026-11-08T12:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia3_a",
+    "type": "story",
+    "media": [
+      "media/stories/Dia3_a.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-08T12:30:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia2_b",
+    "type": "story",
+    "media": [
+      "media/stories/Dia2_b.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-08T16:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -119,7 +179,17 @@
     ],
     "cover": "media/lanc/F5-capa.jpg",
     "caption": "POV: você pergunta pro corretor se ele respondeu o lead e o lead chegou ontem. Quem já viveu isso?\nComenta PRAZO que eu te chamo no direct.\n#corretordeimoveis #atendimentoaocliente #mercadoimobiliario #vendasimobiliarias #santamariars",
-    "publish_at": "2026-11-10T19:00:00-03:00",
+    "publish_at": "2026-11-08T19:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia2_c",
+    "type": "story",
+    "media": [
+      "media/stories/Dia2_c.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-08T20:30:00-03:00",
     "status": "pendente"
   },
   {
@@ -134,7 +204,27 @@
       "media/lanc/L6/06.jpg"
     ],
     "caption": "4 perguntas que todo dono de imobiliária já fez no escuro.\nQuem respondeu o cliente? Qual anúncio vendeu? Quem está parado? Quanto custa cada lead?\nNo Nexo, cada pergunta tem uma tela com a resposta.\nO painel só lê e mostra. A decisão continua com o dono.\nComenta DONO e eu te mostro as 4 telas.\n\n#donodeimobiliaria #gestaoimobiliaria #empreendedorismo #mercadoimobiliario #santamariars",
-    "publish_at": "2026-11-11T19:00:00-03:00",
+    "publish_at": "2026-11-09T12:00:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia3_b",
+    "type": "story",
+    "media": [
+      "media/stories/Dia3_b.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-09T12:30:00-03:00",
+    "status": "pendente"
+  },
+  {
+    "id": "story-dia3_c",
+    "type": "story",
+    "media": [
+      "media/stories/Dia3_c.jpg"
+    ],
+    "caption": "",
+    "publish_at": "2026-11-09T16:00:00-03:00",
     "status": "pendente"
   },
   {
@@ -145,7 +235,7 @@
     ],
     "cover": "media/lanc/F6-capa.jpg",
     "caption": "Desafio: ache o lead parado em 10 segundos. Quantos você achou? Comenta o número da linha.\nQuer isso na sua imobiliária? Chama no direct.\n#corretordeimoveis #mercadoimobiliario #inteligenciaartificial #imobiliaria #riograndedosul",
-    "publish_at": "2026-11-12T19:00:00-03:00",
+    "publish_at": "2026-11-09T19:00:00-03:00",
     "status": "pendente"
   }
 ]
